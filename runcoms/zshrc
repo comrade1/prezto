@@ -11,3 +11,35 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+alias mini="ssh -L 1199:localhost:5900 mini.astracorp.com"
+alias scpresume="rsync -r --delete --size-only --partial --progress --rsh=ssh"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export MAVEN_OPTS="-Xmx512M -XX:MaxPermSize=512m"
+export M3_HOME=/usr/local/Cellar/maven/3.1.1
+export M3=$M3_HOME/bin
+
+export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH"
+
+export ARCHFLAGS="-arch x86_64"
+
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH=$M3:$PATH
+export PATH="/usr/local/mysql/bin:/Users/decker/bin:$PATH:"
+export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+
+#export CLICOLOR='true'
+#export LSCOLORS='egfxcxdxBxegedabagacad'
+#export LS_COLORS='di=34;46:ln=35;40:so=32;40:pi=33;40:ex=1;31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
+#zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# Load RVM into a shell session *as a function*
+
+
+
